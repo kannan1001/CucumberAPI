@@ -1,0 +1,268 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-15T15:57:21.367Z",
+        "line": 14,
+        "name": "verify if place is added using Addplace Api",
+        "description": "",
+        "id": "validating-place-api;verify-if-place-is-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1114977259,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "add place payload with \"BlueLane House\" \"Parsi\" \"142, WinterDame cohane\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BlueLane House\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Parsi\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"142, WinterDame cohane\"",
+                  "offset": 48
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.add_place_payload_with(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2587451020,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls \"AddplaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddplaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 30
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.user_calls_with_post_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1544197,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Api call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 37
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.api_call_is_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 387974540,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11405065,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3055726666,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify place_Id created maps to \"BlueLane House\" using \"getplaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BlueLane House\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"getplaceAPI\"",
+                  "offset": 55
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.verify_place_id_created_maps_to_using(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@addplace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-15T15:57:28.555Z",
+        "before": [
+          {
+            "result": {
+              "duration": 194565,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify if deleteplaceAPI is working",
+        "description": "",
+        "id": "validating-place-api;verify-if-deleteplaceapi-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2088592,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "DeletePlace payload",
+            "match": {
+              "location": "googleplacerequestStepDefinition.delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3253429068,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user calls \"deleteplaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deleteplaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 33
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.user_calls_with_post_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99870,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Api call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 37
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.api_call_is_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14053584,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "googleplacerequestStepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deleteplace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "validating place Api",
+    "description": "",
+    "id": "validating-place-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/resources/Features/placevalidations.feature",
+    "tags": []
+  }
+]
